@@ -1,5 +1,7 @@
 package projetocadastro;
 
+import java.util.Scanner;
+
 
 
 public class Pessoa {
@@ -7,6 +9,9 @@ public class Pessoa {
     private String nome;
     private int idade;
     private int cpf;
+
+    public Pessoa() {
+    }
     
     public Pessoa(String nome, int idade, int cpf){
         this.nome = nome;
@@ -43,11 +48,7 @@ public class Pessoa {
         System.out.println("idade:" + getIdade() );
         System.out.println("cpf:" + getCpf() );
     }
-            
-        
-
-
     
-
+            
 }
 // Oi
