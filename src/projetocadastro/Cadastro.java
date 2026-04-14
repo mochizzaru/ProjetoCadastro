@@ -10,15 +10,18 @@ public class Cadastro {
     
     Pessoa novo = new Pessoa();
 
-    public void cadastroPessoas(Pessoa novo){
+    public void cadastroPessoas(){
         System.out.println("Nome: ");
         novo.setNome(s.nextLine());
         System.out.println("Idade: ");
         novo.setIdade(s.nextInt());
         System.out.println("Cpf: ");
         novo.setCpf(s.nextInt());
+        s.nextLine();
         
         lista.add(novo);
+        
+        System.out.println("Pessoa cadastrada!");
     }
     public void listarPessoas() {
         
@@ -30,29 +33,25 @@ public class Cadastro {
     
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-        int selecionar = 6;
+        Cadastro c = new Cadastro();
+        int selecionar;
         
         do {    
-            System.out.println("\n1- Cadastrar pessoa");
-            System.out.println("\n2- Litar pessoa");
+            System.out.println("\n1- Cadastrar pessoas");
+            System.out.println("\n2- Listar pessoas");
             System.out.println("\n0- Sair");
             System.out.println("Digite a opção: ");
-            selecionar = s.nextInt();
+            selecionar = s.nextInt();s.nextLine();
             
             Pessoa p = new Pessoa();
             
             if (selecionar == 1) {
-                cadastroPessoas(p);
+                c.cadastroPessoas(); 
             }else if(selecionar == 2) {
-                listarPessoas();
+                c.listarPessoas(); 
             }
         } while (selecionar != 0);
     }
-
-
-
-    
-
 }
 
 
